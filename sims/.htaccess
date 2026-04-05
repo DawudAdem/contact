@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /sims/
+
+# Serve existing files/directories directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route API requests to appropriate handlers
+RewriteRule ^api/auth(/.*)?$ api/auth.php [L,QSA]
+RewriteRule ^api/students(/.*)?$ api/students.php [L,QSA]
+RewriteRule ^api/staff(/.*)?$ api/staff.php [L,QSA]
+RewriteRule ^api/subjects(/.*)?$ api/subjects.php [L,QSA]
+RewriteRule ^api/performance(/.*)?$ api/performance.php [L,QSA]
+RewriteRule ^api/dashboard(/.*)?$ api/dashboard.php [L,QSA]
+
+# Route everything else to index.php (SPA)
+RewriteRule ^(.*)$ index.php [L,QSA]
