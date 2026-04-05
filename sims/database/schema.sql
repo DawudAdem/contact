@@ -152,4 +152,4 @@ INSERT INTO `roles` (`role_name`, `permissions`) VALUES
 -- DEFAULT ADMIN USER (password: Admin@123)
 -- =============================================
 INSERT INTO `users` (`username`, `password_hash`, `email`, `full_name`, `role_id`) VALUES
-('admin', '$2y$12$LJ3m4ys3Grl0VPGMnOzYb.KzYqKDkedy3O6ag8PH4DEhiO8HKhVi.', 'admin@alhuda.edu', 'System Administrator', 1);
+('admin', '$2y$12$oDDo3B5OmzK16GsGHx3tt.MbDHvrq6E06w74nEFanTDvyxWdp.mCm', 'admin@alhuda.edu', 'System Administrator', 1);
