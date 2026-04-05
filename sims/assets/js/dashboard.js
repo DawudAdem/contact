@@ -2,7 +2,7 @@
  * Al-Huda SIMS - Dashboard Module with Chart.js Analytics
  */
 
-import { api, showToast } from './app.js';
+import { api, showToast, escapeHtml } from './app.js';
 
 let charts = {};
 
@@ -87,7 +87,7 @@ function renderDashboard(container, stats) {
                         <tbody>
                             ${stats.avg_by_subject.map(s => `
                                 <tr>
-                                    <td>${s.subject_name}</td>
+                                    <td>${escapeHtml(s.subject_name)}</td>
                                     <td><strong>${s.avg_score}</strong></td>
                                     <td>${s.total}</td>
                                 </tr>
@@ -104,7 +104,7 @@ function renderDashboard(container, stats) {
                         <thead><tr><th>Department</th><th>Count</th></tr></thead>
                         <tbody>
                             ${st.by_department.map(d => `
-                                <tr><td>${d.department}</td><td><strong>${d.count}</strong></td></tr>
+                                <tr><td>${escapeHtml(d.department)}</td><td><strong>${d.count}</strong></td></tr>
                             `).join('')}
                         </tbody>
                     </table>

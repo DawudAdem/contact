@@ -186,7 +186,7 @@ async function showPerfForm(container) {
                     <label>Subject *</label>
                     <select id="pf-subject" class="form-control" required>
                         <option value="">Select Subject</option>
-                        ${subjects.map(s => `<option value="${s.id}">${s.subject_code} - ${s.subject_name}</option>`).join('')}
+                        ${subjects.map(s => `<option value="${s.id}">${escapeHtml(s.subject_code)} - ${escapeHtml(s.subject_name)}</option>`).join('')}
                     </select>
                 </div>
                 <div class="form-group">

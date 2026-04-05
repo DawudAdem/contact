@@ -42,12 +42,12 @@ function renderSubjects(container, result) {
                 </div>
                 <select class="filter-select" id="subject-dept-filter">
                     <option value="">All Departments</option>
-                    <option value="Islamic Studies">Islamic Studies</option>
-                    <option value="Languages">Languages</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Education">Education</option>
-                    <option value="Business">Business</option>
+                    <option value="Islamic Studies" ${currentFilters.department === 'Islamic Studies' ? 'selected' : ''}>Islamic Studies</option>
+                    <option value="Languages" ${currentFilters.department === 'Languages' ? 'selected' : ''}>Languages</option>
+                    <option value="Computer Science" ${currentFilters.department === 'Computer Science' ? 'selected' : ''}>Computer Science</option>
+                    <option value="Mathematics" ${currentFilters.department === 'Mathematics' ? 'selected' : ''}>Mathematics</option>
+                    <option value="Education" ${currentFilters.department === 'Education' ? 'selected' : ''}>Education</option>
+                    <option value="Business" ${currentFilters.department === 'Business' ? 'selected' : ''}>Business</option>
                 </select>
             </div>
 

@@ -90,6 +90,23 @@ $router->put('/performance/{id}', function (array $params) use ($perfModel) {
         Response::error('Record not found.', 404);
     }
 
+    $errors = [];
+    $required = ['semester', 'academic_year', 'score'];
+    foreach ($required as $field) {
+        if (!isset($data[$field]) || $data[$field] === '') {
+            $errors[] = "$field is required.";
+        }
+    }
+
+    $score = (float) ($data['score'] ?? 0);
+    if ($score < 0 || $score > 100) {
+        $errors[] = 'Score must be between 0 and 100.';
+    }
+
+    if (!empty($errors)) {
+        Response::error('Validation failed.', 422, $errors);
+    }
+
     $perfModel->update($id, $data);
     Response::success('Performance record updated successfully.');
 });
