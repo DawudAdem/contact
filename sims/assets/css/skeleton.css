@@ -1,0 +1,162 @@
+/* =============================================
+   Al-Huda SIMS - Skeleton Loaders
+   ============================================= */
+
+/* Base Skeleton */
+.skeleton {
+    background: #e0e0e0;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: var(--border-radius-sm, 4px);
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Skeleton Variants */
+.skeleton-text {
+    height: 1.4rem;
+    margin-bottom: 0.8rem;
+    border-radius: 4px;
+}
+
+.skeleton-text:last-child {
+    width: 70%;
+}
+
+.skeleton-title {
+    height: 2rem;
+    width: 60%;
+    margin-bottom: 1.2rem;
+}
+
+.skeleton-circle {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.skeleton-rect {
+    width: 100%;
+    height: 12rem;
+    border-radius: 8px;
+}
+
+.skeleton-btn {
+    height: 3.6rem;
+    width: 10rem;
+    border-radius: 8px;
+}
+
+/* ---- Stat Card Skeleton ---- */
+.skeleton-stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.skeleton-stat-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 8px;
+}
+
+.skeleton-stat-text {
+    flex: 1;
+}
+
+.skeleton-stat-text .skeleton-text:first-child {
+    height: 2.4rem;
+    width: 60%;
+    margin-bottom: 0.6rem;
+}
+
+.skeleton-stat-text .skeleton-text:last-child {
+    height: 1.2rem;
+    width: 80%;
+}
+
+/* ---- Table Row Skeleton ---- */
+.skeleton-table-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.2rem 1.6rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.skeleton-table-row .skeleton-text {
+    flex: 1;
+    margin: 0;
+}
+
+/* ---- Chart Skeleton ---- */
+.skeleton-chart {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+}
+
+/* ---- Dashboard Skeleton ---- */
+.skeleton-dashboard {
+    padding: 0;
+}
+
+.skeleton-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.skeleton-charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skeleton-chart-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.skeleton-chart-card .skeleton-title {
+    margin-bottom: 1.5rem;
+}
+
+/* ---- Table Page Skeleton ---- */
+.skeleton-table-page {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.skeleton-toolbar {
+    display: flex;
+    gap: 1rem;
+    padding: 1.6rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.skeleton-search {
+    height: 3.6rem;
+    flex: 1;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+.skeleton-filter {
+    height: 3.6rem;
+    width: 140px;
+    border-radius: 8px;
+}
